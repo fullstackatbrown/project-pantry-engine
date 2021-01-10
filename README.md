@@ -1,0 +1,5 @@
+# Pantry Engine
+
+Our stack consists of 3 parts: a user interface, a Node.js server acting as an [Elasticsearch client](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/index.html) (and possibly supporting user accounts in the future), and a Selenium scraper for indexing recipe pages using the [Python Elasticsearch API](https://www.elastic.co/guide/en/elasticsearch/client/python-api/current/index.html). We also maintain a collection of scripts for Elasticsearch maintenance.
+
+Ensure that you have installed and can run the Elasticsearch server locally - this is NOT the same as running the Node.js or Python Elasticsearch clients. Refer to [this article](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-18-04) as a guide to get started.
