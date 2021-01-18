@@ -1,18 +1,17 @@
 from selenium import webdriver
+from .base_scraper import Scraper, Recipe
+from typing import Iterable
 
-class TastyScraper:
+class TastyScraper(Scraper):
   """Scraper for tasty.co
   """
   
   HOME_URL = "https://tasty.co/"
   
-  def __init__(self):
-    self.driver = webdriver.Chrome()
-  
-  def _is_compilation(self, url):
+  def _is_compilation(self, url : str) -> str:
     return self.HOME_URL + "compilation/" in url
   
-  def _process_compilation(self, url):
+  def _process_compilation(self, url : str) -> str:
     self.driver.execute_script(f"window.open('{url}');")
     self.driver.switch_to.window(self.driver.window_handles[-1])
     
@@ -23,11 +22,10 @@ class TastyScraper:
         yield feed_item.get_attribute("href")
         
     self.driver.close()
-    self.driver.switch_to.window(self.driver.window_handles[0])
+    self.driver.switch_to.window(self.driver.window_handles[-1])
     
-  def recipe_links(self):
+  def recipe_links(self) -> Iterable[str]:
     self.driver.get(self.HOME_URL)
-    print(self.driver.current_window_handle)
     
     next_container_id = 0
     
@@ -49,3 +47,21 @@ class TastyScraper:
         break
       
       more_button.click()
+      
+    self.driver.close()
+      
+  def parse_recipe(self, url : str) -> Iterable[Recipe]:
+    self.driver.execute_script(f"window.open('{url}');")
+    self.driver.switch_to.window(self.driver.window_handles[-1])
+    
+    title = self.driver.find_element_by_class_name("recipe-name").text
+    
+    ingredient_names = []
+    ingredients = self.driver.find_elements_by_class_name("ingredient")
+    for ingredient in ingredients:
+      ingredient_names.append(ingredient.text)
+
+    self.driver.close()
+    self.driver.switch_to.window(self.driver.window_handles[-1])
+    
+    return Recipe(url, title, ingredient_names)

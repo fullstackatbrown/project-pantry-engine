@@ -1,1 +1,0 @@
-from .TastyScraper import TastyScraper
