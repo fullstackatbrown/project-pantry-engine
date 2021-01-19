@@ -44,7 +44,7 @@ class RecipeIndex:
 
     def delete_recipe(self, url):
         # type: (str) -> None
-        print(self.client.delete_by_query(index='recipe_index', body={'query': {'match_all': {'url': url}}))
+        print(self.client.delete_by_query(index='recipe_index', body={'query': {'match_all': {'url': url}}}))
 
     # Original method takes url: str, host: str (ie, Tasty, NYT cooking, etc.) and presumably
     # html: str as args. Passed for now
