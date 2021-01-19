@@ -55,7 +55,6 @@ class RecipeIndex:
             'host': host,
             'html_string': html,
         }
-
         print(self.client.index('url_index',body=t_doc_url))
 
 
