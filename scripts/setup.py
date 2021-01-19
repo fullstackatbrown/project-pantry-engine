@@ -33,7 +33,7 @@ class RecipeIndex:
     # Sami had url: str, title: str, and ingredients: [str]
     # makes sense for us to use those standards.
     def insert_recipe(self, url, title, ingredients):
-        #type: (str, str, str) -> None
+        #type: (str, str, [str]) -> None
         t_doc_recipe = {
             'url': url,
             'title': title,
