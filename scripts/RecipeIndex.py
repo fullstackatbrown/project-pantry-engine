@@ -42,26 +42,24 @@ class RecipeIndex:
 
         print(self.client.index('recipe_index', body=t_doc_recipe))
 
-    def delete_recipe(self, title):
+    def delete_recipe(self, url):
         # type: (str) -> None
-        print(self.client.delete_by_query(index='recipe_index', body={'query': {'match_all': {'title': title}}}))
+        print(self.client.delete_by_query(index='recipe_index', body={'query': {'match_all': {'url': url}}))
 
     # Original method takes url: str, host: str (ie, Tasty, NYT cooking, etc.) and presumably
     # html: str as args. Passed for now
     def insert_url(self, url, host, html):
         # type: (str, str, str) -> None
-        """
         t_doc_url = {
             'url': url,
             'host': host,
             'html_string': html,
         }
 
-        print(self.client.index())
-        """
-        pass
+        print(self.client.index('url_index',body=t_doc_url))
 
-    def delete_url(self, body):
-        # type: (dict) -> None
-        print(self.client.delete_by_query(index='recipe_index', body={'query': {'match_all': body}}))
+
+    def delete_url(self, url):
+        # type: (str) -> None
+        print(self.client.delete_by_query(index='recipe_index', body={'query': {'match_all': {'url': url}}}))
 
