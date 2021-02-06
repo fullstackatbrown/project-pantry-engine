@@ -62,3 +62,5 @@ class RecipeIndex:
         # type: (str) -> None
         print(self.client.delete_by_query(index='recipe_index', body={'query': {'match_all': {'url': url}}}))
 
+es_client = RecipeIndex()
+es_client.insert_recipe('test','test title', ['apples', 'bananas', 'oranges'])
