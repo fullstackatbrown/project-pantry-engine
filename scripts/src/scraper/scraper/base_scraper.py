@@ -20,14 +20,15 @@ class Scraper:
 
   def all_recipes(self) -> Iterable[Recipe]:
     parser = IngredientParser()
-    
+
     for link in self.recipe_links():
       recipe = self.parse_recipe(link)
       yield replace(recipe, ingredients=[parser.parse(ingredient) for ingredient in recipe.ingredients])
     
     from pathlib import Path
     with open(Path(__file__).parent.parent / "new_ingredients.txt", "w") as f:
-      f.writelines(parser.unknown.sort())
+      for l in sorted(parser.unknown.keys()):
+        f.write(l + "\n")
   
   @abstractmethod
   def recipe_links(self) -> Iterable[str]:

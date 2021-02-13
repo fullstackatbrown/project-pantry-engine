@@ -1,4 +1,4 @@
-from parse_ingredients import parse_ingredient
+from .parse_ingredients import parse_ingredient
 from dataclasses import dataclass
 from typing import List, Mapping
 from pathlib import Path
@@ -24,7 +24,7 @@ class IngredientParser:
   
   def __init__(self):
     self.ingredients_map = self._load_ingredient_names()
-    self.unknown = []
+    self.unknown = {}
   
   def parse(self, ingredient : str) -> str:
     # ½ cup Flour => flour
@@ -32,5 +32,5 @@ class IngredientParser:
     if basic_name in self.ingredients_map:
       return self.ingredients_map[basic_name]
     else:
-      self.unknown.append(basic_name)
+      self.unknown[basic_name] = True
       return basic_name
