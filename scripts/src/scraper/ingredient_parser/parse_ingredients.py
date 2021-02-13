@@ -93,7 +93,8 @@ def parse_ingredient(ingredient : str) -> Ingredient:
     """ Tries to extract the quantity, the unit and the ingredient itself from a string """
     # We're doing a VERY simple parse. This could probably be better with some NLP
     # but we have nowhere near time enough for that during this assignment.
-
+    # temporary hack
+    ingredient = unicodedata.normalize("NFKD", ingredient).replace("\u2044", "")
     rest = ingredient
 
     quantity = 0
