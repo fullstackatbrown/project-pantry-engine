@@ -30,10 +30,12 @@ class RecipeIndex:
     def __init__(self):
         pass
 
+    # store image url --> render?
+
     # Sami had url: str, title: str, and ingredients: [str]
     # makes sense for us to use those standards.
     def insert_recipe(self, url, title, ingredients):
-        #type: (str, str, [str]) -> None
+        # type: (str, str, [str]) -> None
         t_doc_recipe = {
             'url': url,
             'title': title,
@@ -48,19 +50,19 @@ class RecipeIndex:
 
     # Original method takes url: str, host: str (ie, Tasty, NYT cooking, etc.) and presumably
     # html: str as args. Passed for now
-    def insert_url(self, url, host, html):
+    def insert_url(self, url, host, img):
         # type: (str, str, str) -> None
         t_doc_url = {
             'url': url,
             'host': host,
-            'html_string': html,
+            # 'image_url': img,
         }
-        print(self.client.index('url_index',body=t_doc_url))
-
+        print(self.client.index('url_index', body=t_doc_url))
 
     def delete_url(self, url):
         # type: (str) -> None
         print(self.client.delete_by_query(index='recipe_index', body={'query': {'match_all': {'url': url}}}))
 
+
 es_client = RecipeIndex()
-es_client.insert_recipe('test','test title', ['apples', 'bananas', 'oranges'])
+es_client.insert_recipe('test', 'test title', ['apples', 'bananas', 'oranges'])
