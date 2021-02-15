@@ -50,11 +50,12 @@ class RecipeIndex:
 
     # Original method takes url: str, host: str (ie, Tasty, NYT cooking, etc.) and presumably
     # html: str as args. Passed for now
-    def insert_url(self, url, host, img):
+    def insert_url(self, url, host, html):
         # type: (str, str, str) -> None
         t_doc_url = {
             'url': url,
             'host': host,
+            'html': html,
             # 'image_url': img,
         }
         print(self.client.index('url_index', body=t_doc_url))

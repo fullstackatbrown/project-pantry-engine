@@ -4,12 +4,18 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "mocha"
+    "test": "mocha ./test/*.js --recursive --timeout 60000 --exit"
   },
   "dependencies": {
+    "@elastic/elasticsearch": "^7.11.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "chai": "4.3.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "^4.16.4",
+    "mocha": "^8.3.0",
     "morgan": "~1.9.1",
     "yarn": "^1.22.10"
   }
