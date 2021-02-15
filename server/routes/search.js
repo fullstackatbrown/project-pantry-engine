@@ -17,4 +17,4 @@ async function query (index_name, body_json){
     return search_result
 }
 
-console.log(query('recipe_index', {"match_all":{}}))
+// console.log(query('recipe_index', {"match_all":{}}))
