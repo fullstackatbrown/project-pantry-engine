@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Voces&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela&family=Voces&display=swap");
+.embedded {
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25), -3px -3px 6px rgba(255, 255, 255, 0.7);
+}
+
+.floating {
+  box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.25);
+}
+
+#site-title {
+  position: fixed;
+  left: 266px;
+  top: 19px;
+  font: 70px "Voces", cursive;
+  color: #504D4C;
+  text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25), -3px -3px 6px rgba(255, 255, 255, 0.7);
+}
+
+body {
+  background-color: #D5DDE0;
+}
+
+/*# sourceMappingURL=index.css.map */

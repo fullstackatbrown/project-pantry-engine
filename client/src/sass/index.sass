@@ -1,0 +1,41 @@
+// IMPORTS
+@import url('https://fonts.googleapis.com/css2?family=Voces&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Varela&family=Voces&display=swap')
+    
+// COLOR SCHEME
+$background-color: #D5DDE0
+$thick-text: #504D4C
+$thin-text: #1B1A1A
+$light-gray-text: #AFAFAF
+
+$missing: #AD6464
+
+// COMPONENTS
+
+$varela: 'Varela', sans-serif
+$voces: 'Voces', cursive
+
+$embedded: 4px 4px 5px rgba(0, 0, 0, 0.25), -3px -3px 6px rgba(255, 255, 255, 0.7)
+$floating: 0px 3px 9px rgba(0, 0, 0, 0.25)
+
+// CLASSES
+
+.embedded
+    box-shadow: $embedded
+.floating
+    box-shadow: $floating
+
+// IDS
+
+#site-title
+    position: fixed
+    left: 266px
+    top: 19px
+    font: 70px $voces
+    color: $thick-text
+    text-shadow: $embedded
+
+// TAGS
+
+body
+    background-color: $background-color
