@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Voces&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Varela&family=Voces&display=swap");
+.recipe-card:hover {
+  box-shadow: 0px 3px 14px rgba(0, 0, 0, 0.35);
+}
+
+.recipe-card {
+  transition: 0.3s cubic-bezier(0.29, 0.87, 0.7, 1.02);
+}
+
 .embedded {
   box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25), -3px -3px 6px rgba(255, 255, 255, 0.7);
 }
@@ -8,17 +16,87 @@
   box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.25);
 }
 
+.highlighted-floating {
+  box-shadow: 0px 3px 14px rgba(0, 0, 0, 0.35);
+  transition: 0.3s cubic-bezier(0.29, 0.87, 0.7, 1.02);
+}
+
+.block-title {
+  display: block;
+  top: 20px;
+  font: 35px "Voces", cursive;
+  color: #504D4C;
+  text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25), -3px -3px 6px rgba(255, 255, 255, 0.7);
+}
+
+.recipe-card {
+  margin: 0.5em;
+  border-radius: 1.5em;
+  height: 8em;
+  cursor: pointer;
+}
+.recipe-card .recipe-card-image {
+  border-radius: 1em;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.recipe-card .card-title {
+  color: #504D4C;
+  font-size: 1.7em;
+}
+.recipe-card .card-text {
+  color: #AFAFAF;
+}
+.recipe-card .card-body {
+  height: inherit;
+}
+.recipe-card .row {
+  height: inherit;
+}
+.recipe-card .col {
+  height: inherit;
+}
+.recipe-card .col-5 {
+  height: inherit;
+}
+.ingredient-search-bar {
+  border-style: none;
+}
+
+.recipe-search-bar {
+  color: #AFAFAF;
+  background-color: transparent;
+  border-style: none;
+  font-size: 20px;
+}
+
+.ingredient-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font: 22px "Voces", cursive;
+}
+
 #site-title {
-  position: fixed;
-  left: 266px;
-  top: 19px;
+  display: block;
+  margin-left: 15%;
+  top: 20px;
   font: 70px "Voces", cursive;
   color: #504D4C;
   text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25), -3px -3px 6px rgba(255, 255, 255, 0.7);
 }
 
+#pantry-list {
+  width: 85%;
+  opacity: 0.92;
+  max-height: 60vh;
+  overflow-y: scroll;
+}
+
 body {
   background-color: #D5DDE0;
+  font-family: "Voces", cursive;
 }
 
 /*# sourceMappingURL=index.css.map */

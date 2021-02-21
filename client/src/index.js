@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './App.js';
 import './style/index.css';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <div id="site-title">pantry engine</div>
+
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
