@@ -1,6 +1,7 @@
 from selenium import webdriver
 from .base_scraper import Scraper, Recipe
-from typing import Iterable
+from typing import Iterable, Optional
+import re
 
 class TastyScraper(Scraper):
   """Scraper for tasty.co
@@ -8,7 +9,7 @@ class TastyScraper(Scraper):
   
   HOME_URL = "https://tasty.co/"
   
-  def _is_compilation(self, url : str) -> str:
+  def _is_compilation(self, url : str) -> bool:
     return self.HOME_URL + "compilation/" in url
   
   def _process_compilation(self, url : str) -> str:
@@ -49,8 +50,24 @@ class TastyScraper(Scraper):
       more_button.click()
       
     self.driver.close()
-      
-  def parse_recipe(self, url: str) -> Iterable[Recipe]:
+
+  def _get_image(self):
+    results = self.driver.find_elements_by_class_name("vjs-poster")
+    if len(results) > 0:
+      poster = results[0]
+      style = poster.get_attribute("style")
+      img_url = re.search(r"url\(\"(.*)\"\)", style).group(1)
+      return img_url[:img_url.find("?")]
+
+    results = self.driver.find_elements_by_css_selector(".non-video img")
+    if len(results) > 0:
+      img = results[0]
+      img_url = img.get_attribute("src")
+      return img_url[:img_url.find("?")]
+
+    return None
+
+  def parse_recipe(self, url: str, image_url : Optional[str] = None) -> Recipe:
     self.driver.execute_script(f"window.open('{url}');")
     self.driver.switch_to.window(self.driver.window_handles[-1])
     
@@ -61,7 +78,8 @@ class TastyScraper(Scraper):
     for ingredient in ingredients:
       ingredient_names.append(ingredient.text)
 
+    img_url = self._get_image()
     self.driver.close()
     self.driver.switch_to.window(self.driver.window_handles[-1])
     
-    return Recipe(url, title, ingredient_names)
+    return Recipe(url, title, ingredient_names, img_url)
