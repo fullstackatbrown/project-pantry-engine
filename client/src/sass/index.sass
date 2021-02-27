@@ -27,9 +27,9 @@ $transition-animation: cubic-bezier(0.29, 0.87, 0.7, 1.02)
     transition: 0.3s $transition-animation
 
 %ellipsis-overflow
-    //text-overflow: ellipsis
-    //overflow: hidden
-    //white-space: nowrap
+    text-overflow: ellipsis
+    overflow: hidden
+    white-space: nowrap
 
 // CLASSES
 
@@ -63,7 +63,7 @@ $transition-animation: cubic-bezier(0.29, 0.87, 0.7, 1.02)
         height: 100%
         object-fit: cover
     .list-group-item
-        padding: 0.25rem 1.25rem
+        padding: 0.25rem 0.5rem
         @extend %ellipsis-overflow
     .card-title
         color: $thick-text
@@ -76,11 +76,18 @@ $transition-animation: cubic-bezier(0.29, 0.87, 0.7, 1.02)
         height: inherit
     .col
         height: inherit
+        max-width: 58%
     .col-5
         height: inherit
     
     &:hover
         @extend %highlighted-floating
+
+    .ingredients-possessed
+        border-top: 0
+        color: $light-gray-text
+    .ingredients-missing
+        color: #AD6464
         
 
 .ingredient-search-bar

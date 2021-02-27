@@ -13,8 +13,8 @@ class RecipeCard extends Component {
                         <Col className="m-0 p-2">
                             <Card.Title>recipe name</Card.Title>
                             <ListGroup variant="flush">
-                                <ListGroup.Item>eggs, tomatoes, peppers, onions, anchovies</ListGroup.Item>
-                                <ListGroup.Item>paprika, sour cream, pineapple</ListGroup.Item>
+                                <ListGroup.Item className="ingredients-possessed">eggs, tomatoes, peppers, onions, anchovies</ListGroup.Item>
+                                <ListGroup.Item className="ingredients-missing">paprika, sour cream, pineapple</ListGroup.Item>
                             </ListGroup>
                         </Col>
                     </Row>

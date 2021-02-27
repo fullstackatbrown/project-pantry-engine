@@ -7,6 +7,12 @@
   transition: 0.3s cubic-bezier(0.29, 0.87, 0.7, 1.02);
 }
 
+.recipe-card .list-group-item {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .embedded {
   box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25), -3px -3px 6px rgba(255, 255, 255, 0.7);
 }
@@ -42,7 +48,7 @@
   object-fit: cover;
 }
 .recipe-card .list-group-item {
-  padding: 0.25rem 1.25rem;
+  padding: 0.25rem 0.5rem;
 }
 .recipe-card .card-title {
   color: #504D4C;
@@ -59,10 +65,19 @@
 }
 .recipe-card .col {
   height: inherit;
+  max-width: 58%;
 }
 .recipe-card .col-5 {
   height: inherit;
 }
+.recipe-card .ingredients-possessed {
+  border-top: 0;
+  color: #AFAFAF;
+}
+.recipe-card .ingredients-missing {
+  color: #AD6464;
+}
+
 .ingredient-search-bar {
   border-style: none;
 }
