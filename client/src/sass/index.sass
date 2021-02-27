@@ -1,5 +1,4 @@
 // IMPORTS
-@import url('https://fonts.googleapis.com/css2?family=Voces&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Varela&family=Voces&display=swap')
 
 // COLOR SCHEME
@@ -27,6 +26,11 @@ $transition-animation: cubic-bezier(0.29, 0.87, 0.7, 1.02)
 %default-transition
     transition: 0.3s $transition-animation
 
+%ellipsis-overflow
+    //text-overflow: ellipsis
+    //overflow: hidden
+    //white-space: nowrap
+
 // CLASSES
 
 .embedded
@@ -39,14 +43,15 @@ $transition-animation: cubic-bezier(0.29, 0.87, 0.7, 1.02)
     transition: 0.3s $transition-animation
 
 .block-title
+    font-family: $varela
     display: block
     top: 20px
     font: 35px $voces
-    color: $thick-text
+    color: $thin-text
     text-shadow: $embedded // see if we want to keep this
 
 .recipe-card
-    margin: 0.5em
+    margin: 0.25em 1em
     border-radius: 1.5em
     height: 8em
     cursor: pointer
@@ -57,6 +62,9 @@ $transition-animation: cubic-bezier(0.29, 0.87, 0.7, 1.02)
         width: 100%
         height: 100%
         object-fit: cover
+    .list-group-item
+        padding: 0.25rem 1.25rem
+        @extend %ellipsis-overflow
     .card-title
         color: $thick-text
         font-size: 1.7em

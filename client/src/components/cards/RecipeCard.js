@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, Row, Col, Image } from 'react-bootstrap';
+import { Card, Row, Col, Image, ListGroup } from 'react-bootstrap';
 
 class RecipeCard extends Component {
     render() {
@@ -12,9 +12,10 @@ class RecipeCard extends Component {
                         </Col>
                         <Col className="m-0 p-2">
                             <Card.Title>recipe name</Card.Title>
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of the card's content.
-                                </Card.Text>
+                            <ListGroup variant="flush">
+                                <ListGroup.Item>eggs, tomatoes, peppers, onions, anchovies</ListGroup.Item>
+                                <ListGroup.Item>paprika, sour cream, pineapple</ListGroup.Item>
+                            </ListGroup>
                         </Col>
                     </Row>
                 </Card.Body>

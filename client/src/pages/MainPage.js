@@ -5,7 +5,7 @@ import RecipeBlock from '../components/RecipeBlock'
 
 export default function MainPage() {
     return (
-        <Container className="mt-1">
+        <Container className="mt-1 mx-5" fluid="xl">
             <Row>
                 <UserIngredientBlock />
                 <RecipeBlock />
