@@ -50,7 +50,7 @@ class TastyScraper(Scraper):
       
     self.driver.close()
       
-  def parse_recipe(self, url : str) -> Iterable[Recipe]:
+  def parse_recipe(self, url: str) -> Iterable[Recipe]:
     self.driver.execute_script(f"window.open('{url}');")
     self.driver.switch_to.window(self.driver.window_handles[-1])
     

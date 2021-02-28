@@ -25,10 +25,11 @@ class IngredientParser:
   def __init__(self):
     self.ingredients_map = self._load_ingredient_names()
     self.unknown = {}
+    self.raw_ingredients = []
   
-  def parse(self, ingredient : str) -> str:
-    # ½ cup Flour => flour
-    basic_name = parse_ingredient(ingredient).name.lower()
+  def parse(self, ingredient: str) -> str:
+    self.raw_ingredients.append(ingredient)
+    basic_name = parse_ingredient(ingredient).name
     if basic_name in self.ingredients_map:
       return self.ingredients_map[basic_name]
     else:
