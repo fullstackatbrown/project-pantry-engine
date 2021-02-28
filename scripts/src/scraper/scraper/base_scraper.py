@@ -1,4 +1,4 @@
-from typing import List, Iterable
+from typing import List, Iterable, Optional
 from abc import abstractmethod
 from selenium import webdriver
 from dataclasses import replace, dataclass
@@ -9,6 +9,7 @@ class Recipe:
   url : str
   name : str
   ingredients : List[str]
+  img_url : Optional[str]
 
 class Scraper:
   """Base scraper to implement
