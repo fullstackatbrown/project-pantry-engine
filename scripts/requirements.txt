@@ -1,3 +1,5 @@
 selenium
 nltk
 elasticsearch
+beautifulsoup4
+requests
