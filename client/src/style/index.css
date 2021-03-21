@@ -78,6 +78,45 @@
   color: #AD6464;
 }
 
+.modal-backdrop {
+  backdrop-filter: blur(8px);
+}
+
+.recipe-preview .modal-content {
+  border-radius: 1em;
+}
+.recipe-preview .modal-content #recipe-preview-name {
+  font: 32px "Voces", cursive;
+}
+.recipe-preview .modal-content .row {
+  height: 15em;
+  margin: 0;
+}
+.recipe-preview .modal-content .recipe-preview-text {
+  padding: 10px;
+  height: auto;
+  display: block;
+}
+.recipe-preview .modal-content .recipe-preview-text h2 {
+  font: 32px "Voces", cursive;
+}
+.recipe-preview .modal-content .recipe-preview-text p {
+  color: #504D4C;
+  font: 24px "Varela", sans-serif;
+}
+.recipe-preview .modal-content .modal-header {
+  padding: 10px;
+}
+.recipe-preview .modal-content .modal-body {
+  padding: 0;
+}
+.recipe-preview .modal-content .recipe-preview-image {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 .ingredient-search-bar {
   border-style: none;
 }

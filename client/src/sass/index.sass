@@ -88,7 +88,36 @@ $transition-animation: cubic-bezier(0.29, 0.87, 0.7, 1.02)
         color: $light-gray-text
     .ingredients-missing
         color: #AD6464
-        
+
+.modal-backdrop
+    backdrop-filter: blur(8px)
+.recipe-preview
+    .modal-content
+        border-radius: 1em
+        #recipe-preview-name
+            font: 32px $voces
+        .row
+            height: 15em
+            margin: 0
+        .recipe-preview-text
+            padding: 10px
+            height: auto
+            display: block
+            h2
+                font: 32px $voces
+            p
+                color: $thick-text
+                font: 24px $varela
+        .modal-header
+            padding: 10px
+            //border: none
+        .modal-body
+            padding: 0
+        .recipe-preview-image
+            cursor: pointer
+            height: 100%
+            width: 100%
+            object-fit: cover
 
 .ingredient-search-bar
     border-style: none
