@@ -3,43 +3,44 @@ import { Row, Col, ListGroup } from 'react-bootstrap'
 import IngredientCard from './cards/IngredientCard'
 import axios from 'axios'
 
-// PLACEHOLDER
-const url = "insert server url here"
+import { usePantryContext } from '../context/PantryContext'
 
-// const searchRecipes = () => {
-//     axios.post(url, { 
-//         test: "test"
-//     })
-//     .then((data) => {
-//         console.log(data)
-//     }).catch((error) => console.log(error))
-// }
+// PLACEHOLDER
+const url = "http://localhost:4000/"
 
 // TODO: get all items in pantry and run search request
 export default function UserPantry() {
-    // TODO: finish this
+  // TODO: finish this
 
-    // pantry is an array of objects representing an ingredient
-    // TODO: --------- useContext() instead ??? ----------
-    const [pantry, setPantry] = useState([])
+  const searchRecipes = () => {
+    axios.post(url, {
+      test: "test"
+    })
+      .then((data) => {
+        setPantry(data)
+      }).catch((error) => console.log(error))
+  }
 
-    // render an ingredient card for every pantry item in the pantry list
-    return (
-        <div className="mt-4">
-            <ListGroup variant="flush" id="pantry-list"> 
-                <ListGroup.Item> <IngredientCard/> </ListGroup.Item>
-                <ListGroup.Item> <IngredientCard/> </ListGroup.Item>
-                <ListGroup.Item> <IngredientCard/> </ListGroup.Item>
-                <ListGroup.Item> <IngredientCard/> </ListGroup.Item>
-                <ListGroup.Item> <IngredientCard/> </ListGroup.Item>
-                <ListGroup.Item> <IngredientCard/> </ListGroup.Item>
-                <ListGroup.Item> <IngredientCard/> </ListGroup.Item>
-                <ListGroup.Item> <IngredientCard/> </ListGroup.Item>
-                <ListGroup.Item> <IngredientCard/> </ListGroup.Item>
-                <ListGroup.Item> <IngredientCard/> </ListGroup.Item>
+  // pantry is an array of objects representing an ingredient
 
-            </ListGroup> 
-            
-        </div>
-    )
+  // render an ingredient card for every pantry item in the pantry list
+
+  const { pantry, setPantry } = usePantryContext()
+
+  const ingrList = pantry.map((ingr) => {
+    return <ListGroup.Item> <IngredientCard name={ingr.name} /> </ListGroup.Item>
+  })
+
+  return (
+    <div className="mt-4">
+      <ListGroup variant="flush" id="pantry-list">
+        {ingrList}
+
+        <ListGroup.Item> <IngredientCard name="onion"/> </ListGroup.Item>
+        <ListGroup.Item> <IngredientCard name="onion2"/> </ListGroup.Item>
+
+      </ListGroup>
+
+    </div>
+  )
 }

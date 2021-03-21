@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row, Col } from 'react-bootstrap'
 
-export default function IngredientCard() {
+export default function IngredientCard({ name }) {
     return (
         <Row>
             <Col sm={3}>
@@ -11,7 +11,7 @@ export default function IngredientCard() {
             </Col>
             <Col sm={9}>
                 <div className="ingredient-text ml-0 pl-0 mt-3">
-                    ingredient name
+                    {name}
                 </div>
 
             </Col>
