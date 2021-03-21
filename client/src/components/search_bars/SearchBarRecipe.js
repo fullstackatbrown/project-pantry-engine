@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Row } from 'react-bootstrap'
+import SelectSearch from 'react-select-search';
 
 class SearchBarRecipe extends Component {
     render() {

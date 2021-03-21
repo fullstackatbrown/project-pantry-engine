@@ -17,7 +17,7 @@ export default function UserPantry() {
       test: "test"
     })
       .then((data) => {
-        setPantry(data)
+        // setPantry(data)
       }).catch((error) => console.log(error))
   }
 
@@ -26,9 +26,11 @@ export default function UserPantry() {
   // render an ingredient card for every pantry item in the pantry list
 
   const { pantry, setPantry } = usePantryContext()
+  console.log(pantry)
 
   const ingrList = pantry.map((ingr) => {
-    return <ListGroup.Item> <IngredientCard name={ingr.name} /> </ListGroup.Item>
+    console.log(ingr)
+    return <ListGroup.Item> <IngredientCard name={ingr.label} /> </ListGroup.Item>
   })
 
   return (

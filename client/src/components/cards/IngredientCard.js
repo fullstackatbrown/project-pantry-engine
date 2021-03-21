@@ -2,6 +2,8 @@ import React from 'react'
 import { Row, Col } from 'react-bootstrap'
 
 export default function IngredientCard({ name }) {
+
+  console.log(name)
     return (
         <Row>
             <Col sm={3}>
