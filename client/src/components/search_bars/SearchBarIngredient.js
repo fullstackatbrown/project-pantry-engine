@@ -24,7 +24,8 @@ export default function SearchBarIngredient() {
 
     return (
 
-      <Select options={options} onChange={(ingr) => setPantry(pantry.concat(ingr))} placeholder="search for ingredients"/>
+      <Select options={options}
+      onChange={(ingr) => setPantry(pantry.concat(ingr))} placeholder="search for ingredients"/>
 
       // <SelectSearch options={options} autoComplete="on" search={true} name="ingredients" placeholder="search for ingredients" />
         // <Form className="mt-4">

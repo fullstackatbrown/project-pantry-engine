@@ -26,10 +26,16 @@ export default function UserPantry() {
   // render an ingredient card for every pantry item in the pantry list
 
   const { pantry, setPantry } = usePantryContext()
-  console.log(pantry)
 
-  const ingrList = pantry.map((ingr) => {
-    console.log(ingr)
+  const ingrSet = new Set()
+
+  const p = pantry.filter((ingr) => {
+    const b = !ingrSet.has(ingr.label)
+    ingrSet.add(ingr.label)
+    return b
+  })
+
+  const ingrList = p.map((ingr) => {
     return <ListGroup.Item> <IngredientCard name={ingr.label} /> </ListGroup.Item>
   })
 
@@ -37,10 +43,6 @@ export default function UserPantry() {
     <div className="mt-4">
       <ListGroup variant="flush" id="pantry-list">
         {ingrList}
-
-        <ListGroup.Item> <IngredientCard name="onion"/> </ListGroup.Item>
-        <ListGroup.Item> <IngredientCard name="onion2"/> </ListGroup.Item>
-
       </ListGroup>
 
     </div>
