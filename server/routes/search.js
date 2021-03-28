@@ -47,7 +47,7 @@ async function queryT(index_name, ing_arrI) {
                 'query': {
                     'bool': {
                         'must':
-                            [{'match': {'ingredients': 'ground beef'}}, {'match': {'ingredients': 'salt'}}]
+                            [{'match': {'ingredients': ing_arrI}}]
                     }
                 }
             }
