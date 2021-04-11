@@ -1,69 +1,58 @@
 const {Client} = require('@elastic/elasticsearch');
 const client = new Client({node: 'http://localhost:9200'});
 
-
-// array to JSON --> do I need?
-
-// TODO --> array
-function createIngredientsJson(ing_arr) {
-    for (let i = 0; i < ing_arr.length; i++) {
-        ing_arr[i] = {'match': {'ingredients': ing_arr[i]}}
-    }
-    return ing_arr
-}
-
-
 // TODO --> "ground beef" also returns results with ground ___
-async function query(index_name, ing_arrI) {
-    console.log(createIngredientsJson(ing_arrI));
-    let [search_result] = await Promise.all([client.search({
-            index: index_name,
+// TODO --> error handling?
+
+// expects ?ing[]=first&ing[]=second ...
+const get_search = async function (req, res, next) {
+
+    let arr = req.url.split('?');
+    if (req.url.length > 1 && arr[1] !== ''){
+        let ing_arr = req.query.ing
+        for (let i = 0; i < ing_arr.length; i++) {
+            ing_arr[i] = {'match': {'ingredients': ing_arr[i]}}
+        }
+        console.log(ing_arr)
+        let search_query = {
+            index: 'recipe_index',
             body: {
                 'query': {
                     'bool': {
-                        'must': [createIngredientsJson(ing_arrI)]
+                        'should': ing_arr
                     }
                 }
-            }
-            ,
+
+            },
             'size': 10
         }
-        ).then(function (response) {
-            return response
-        }, function (err) {
-            console.trace(err.message)
-        })
-        ])
-    ;
 
-    return search_result
+
+        let resp_arr = [];
+
+        async function sendResponse() {
+            const {body} = await client.search(search_query)
+            for (let i = 0; i < body.hits.hits.length; i++) {
+                resp_arr.push(body.hits.hits[i])
+            }
+            console.log(resp_arr)
+            res.json(resp_arr);
+        }
+
+        await sendResponse();
+    } else {
+        res.send("No params");
+    }
+}
+
+const get_results = function (req, res, next) {
+    // this doesn't have access to resp_arr declared in the function above...
+    // see ./app/server/controllers/search_controllers.js
+    res.json(resp_arr)
 }
 
 
-async function queryT(index_name, ing_arrI) {
-    let [search_result] = await Promise.all([client.search({
-            index: index_name,
-            body: {
-                'query': {
-                    'bool': {
-                        'must':
-                            [{'match': {'ingredients': ing_arrI}}]
-                    }
-                }
-            }
-            ,
-            'size': 10
-        }
-        ).then(function (response) {
-            return response
-        }, function (err) {
-            console.trace(err.message)
-        })
-        ])
-    ;
-
-    return search_result
+module.exports = {
+    get_results,
+    get_search
 }
-
-exports.query = query;
-exports.queryT = queryT;
