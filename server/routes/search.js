@@ -41,6 +41,7 @@ const get_search = async function (req, res, next) {
 
         await sendResponse();
     } else {
+        // TODO --> Bad request, 400 code
         res.send("No params");
     }
 }
