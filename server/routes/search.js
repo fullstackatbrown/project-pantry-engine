@@ -1,44 +1,59 @@
-const {Client} = require('@elastic/elasticsearch')
-const client = new Client({ node: 'http://localhost:9200'})
+const {Client} = require('@elastic/elasticsearch');
+const client = new Client({node: 'http://localhost:9200'});
 
-// What we have in pantry (ingredients)
-// What we need to make it --> how to make the difference
+// TODO --> "ground beef" also returns results with ground ___
+// TODO --> error handling?
 
-// issues: better method of searching several values than 'terms'
-//      --> 'should' clauses pop up a lot, but how would I avoid hard coding?
+// expects ?ing[]=first&ing[]=second ...
+const get_search = async function (req, res, next) {
 
-var should_a = {
-    'bool': {
-        "should": create_ingredients_json(['beef', 'soy sauce'])
-    }
-}
-
-// array(string) --> array(JSON)
-function create_ingredients_json(ing_arr){
-    for (let i = 0; i<ing_arr.length; i++){
-        ing_arr[i] = {"match": {"ingredients": ing_arr[i]}}
-    }
-    return ing_arr
-}
-
-// string, string --> JSON
-async function query (index_name, body_json){
-    let search_result = await client.search({
-        index: index_name,
-        body: {
-            "query": body_json,
-            "size": 15
+    let arr = req.url.split('?');
+    if (req.url.length > 1 && arr[1] !== ''){
+        let ing_arr = req.query.ing
+        for (let i = 0; i < ing_arr.length; i++) {
+            ing_arr[i] = {'match': {'ingredients': ing_arr[i]}}
         }
-    }).then(function(response){
-        return response
-    }, function(err){
-        console.trace(err.message)
-    });
+        console.log(ing_arr)
+        let search_query = {
+            index: 'recipe_index',
+            body: {
+                'query': {
+                    'bool': {
+                        'should': ing_arr
+                    }
+                }
 
-    return search_result
+            },
+            'size': 10
+        }
+
+
+        let resp_arr = [];
+
+        async function sendResponse() {
+            const {body} = await client.search(search_query)
+            for (let i = 0; i < body.hits.hits.length; i++) {
+                resp_arr.push(body.hits.hits[i])
+            }
+            console.log(resp_arr)
+            res.json(resp_arr);
+        }
+
+        await sendResponse();
+    } else {
+        // TODO --> Bad request, 400 code
+        res.send("No params");
+    }
 }
 
-(async function() {
-    let results = await query('recipe_index', should_a)
-    console.log (results.body.hits.hits)
-})();
+const get_results = function (req, res, next) {
+    // this doesn't have access to resp_arr declared in the function above...
+    // see ./app/server/controllers/search_controllers.js
+    res.json(resp_arr)
+}
+
+
+module.exports = {
+    get_results,
+    get_search
+}

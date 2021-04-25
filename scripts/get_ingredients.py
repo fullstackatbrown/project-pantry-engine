@@ -26,5 +26,13 @@ for pane in soup.find_all("v-pane"):
 
 driver.close()
 
+ingredients_by_category = {}
+
+for ingredient in ingredients:
+    if ingredient["category"] not in ingredients_by_category:
+        ingredients_by_category[ingredient["category"]] = []
+
+    ingredients_by_category[ingredient["category"]].append(ingredient["ingredient"])
+
 with open('ingredients.json', 'w') as f:
-    json.dump(ingredients, f)
+    json.dump(ingredients_by_category, f)
