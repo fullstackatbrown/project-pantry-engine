@@ -1,19 +1,21 @@
 # taken from the package parse_ingredients
 
+from nltk.stem import WordNetLemmatizer
 import unicodedata
 import re
 from dataclasses import dataclass
 import nltk
 nltk.download("wordnet")
-from nltk.stem import WordNetLemmatizer
+
 
 @dataclass
 class Ingredient:
-    name : str
-    quantity : int
-    unit : str
-    comment : str
-    original_string : str
+    name: str
+    quantity: int
+    unit: str
+    comment: str
+    original_string: str
+
 
 # a predefined list of unit's
 units = {
@@ -152,7 +154,8 @@ fractionMatch = re.compile(r'[\u00BC-\u00BE\u2150-\u215E]')
 # numbers (0, 1, 2, 3, ..., etc.)
 numberMatch = re.compile(r'(\d*\.?\d+)')
 # numbers and fractions (1 ⅓, 1 ⅓, etc.)¹¹⁄₂
-numberAndFractionMatch = re.compile(r'(\d{1,3}\s?[\u00BC-\u00BE\u2150-\u215E])')
+numberAndFractionMatch = re.compile(
+    r'(\d{1,3}\s?[\u00BC-\u00BE\u2150-\u215E])')
 # simple slash fractions (1/2, 1/3, 5/4, etc.)
 slashFractionMatch = re.compile(r'(\d{1,3}\/\d{1,3})')
 # vulgar slash which is it's own character in unicode.
@@ -161,19 +164,22 @@ vulgarSlashFractionMatch = re.compile(r'(\d{1,3}\u2044\d{1,3})')
 # number with a vulgar slash in a fraction (1 1⁄2)
 numberAndVulgarSlashFraction = re.compile(r'(\d{1,3}?\s\d\u2044\d{1,3})')
 # any of the above
-quantityMatch = re.compile(r'(?<!\w)((\d{1,3}?\s\d\/\d{1,3})|(\d{1,3}?\s?\d\u2044\d{1,3})|(\d{1,3}\u2044\d{1,3})|(\d{1,3}\s?[\u00BC-\u00BE\u2150-\u215E])|([\u00BC-\u00BE\u2150-\u215E])|(\d{1,3}\/?\d?)|(\d*\.?\d+)%?)')# string between parantheses, for example: "this is not a match (but this is, including the parantheses)"
+# string between parantheses, for example: "this is not a match (but this is, including the parantheses)"
+quantityMatch = re.compile(
+    r'(?<!\w)((\d{1,3}?\s\d\/\d{1,3})|(\d{1,3}?\s?\d\u2044\d{1,3})|(\d{1,3}\u2044\d{1,3})|(\d{1,3}\s?[\u00BC-\u00BE\u2150-\u215E])|([\u00BC-\u00BE\u2150-\u215E])|(\d{1,3}\/?\d?)|(\d*\.?\d+)%?)')
 betweenParanthesesMatch = re.compile(r'\(([^\)]+)\)')
 
 wnl = WordNetLemmatizer()
-    
 
-def isFullTypedFraction(text : str) -> bool:
+
+def isFullTypedFraction(text: str) -> bool:
     if text.find('/') >= 0 or text.find('\u2044') >= 0:
         return True
     else:
         return False
 
-def toFloat(quantity : str) -> float:
+
+def toFloat(quantity: str) -> float:
     """ Parse a valid quantity string to a float """
     # We're using 'match', which searches only in the front of the string.
     # That way we know that if it's just a fraction (½) it can never be 1 ½, for example.
@@ -202,12 +208,12 @@ def toFloat(quantity : str) -> float:
         return float(quantity)
 
 
-
-def parse_ingredient(ingredient : str) -> Ingredient:
+def parse_ingredient(ingredient: str) -> Ingredient:
     """ Tries to extract the quantity, the unit and the ingredient itself from a string """
     # We're doing a VERY simple parse. This could probably be better with some NLP
     # but we have nowhere near time enough for that during this assignment.
-    ingredient = unicodedata.normalize("NFKD", ingredient).replace("\u2044", "/").lower()
+    ingredient = unicodedata.normalize(
+        "NFKD", ingredient).replace("\u2044", "/").lower()
     rest = ingredient
 
     quantity = 0
@@ -228,14 +234,14 @@ def parse_ingredient(ingredient : str) -> Ingredient:
     if match is not None:
         quantity_string = match.group().strip(' ')
         quantity = toFloat(quantity_string)
-        
+
     if quantity_string is not None:
         length = len(quantity_string)
         if ingredient[length] == ' ':
             length = length + 1
         rest = ingredient[length:]
 
-    # Recipe websites tend to put a comment between parantheses. 
+    # Recipe websites tend to put a comment between parantheses.
     # for example: 1 (fresh) egg. Let's see if we can find any and extract it
     betweenMatch = betweenParanthesesMatch.search(rest)
     if betweenMatch is not None:
@@ -257,23 +263,23 @@ def parse_ingredient(ingredient : str) -> Ingredient:
     splitted = rest.split(' ')
 
     # If the string is just one more word, it's probably safe to assume
-    # that there is no unit string available, but we're dealing with, 
+    # that there is no unit string available, but we're dealing with,
     # for example: 1 egg, where egg is both the ingredient and unit.
     if len(splitted) == 1:
         return Ingredient(rest, quantity, '', comment, ingredient)
-    
+
     # let's see if we can find something in the string that matches any
     # of my defined units. The list isn't finished and will probably miss
     # lot's of them. But by using a predefined list we avoid a situation where
-    # "1 fresh egg" gives us a unit "fresh". Here the unit will be undefined 
-    # and 'fresh egg' will be the ingredient. This should probably later be 
+    # "1 fresh egg" gives us a unit "fresh". Here the unit will be undefined
+    # and 'fresh egg' will be the ingredient. This should probably later be
     # filtered again.
     wouldBeUnit = splitted[0]
     for key in units:
         value = units[key]
         if wouldBeUnit in value:
             unit = key
-    
+
     # If we did have a unit, join the rest of the string
     # if we didn't, join the entire string
     if unit != '':
