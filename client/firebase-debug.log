@@ -1,0 +1,419 @@
+[debug] [2021-09-20T20:51:57.474Z] ----------------------------------------------------------------------
+[debug] [2021-09-20T20:51:57.476Z] Command:       /home/awang/.nvm/versions/node/v14.16.0/bin/node /home/awang/.nvm/versions/node/v14.16.0/bin/firebase init
+[debug] [2021-09-20T20:51:57.476Z] CLI Version:   9.18.0
+[debug] [2021-09-20T20:51:57.476Z] Platform:      linux
+[debug] [2021-09-20T20:51:57.476Z] Node Version:  v14.16.0
+[debug] [2021-09-20T20:51:57.476Z] Time:          Mon Sep 20 2021 16:51:57 GMT-0400 (Eastern Daylight Time)
+[debug] [2021-09-20T20:51:57.477Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-09-20T20:51:57.478Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2021-09-20T20:51:57.493Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-09-20T20:51:57.494Z] > authorizing via signed-in user (awang.yz@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/awang/project-pantry-engine/client
+
+[debug] [2021-09-20T20:51:57.642Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2021-09-20T20:51:57.642Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[error] 
+[error] Error: Must select at least one feature. Use SPACEBAR to select features, or specify a feature by running firebase init [feature_name]
+[debug] [2021-09-20T20:52:07.234Z] ----------------------------------------------------------------------
+[debug] [2021-09-20T20:52:07.236Z] Command:       /home/awang/.nvm/versions/node/v14.16.0/bin/node /home/awang/.nvm/versions/node/v14.16.0/bin/firebase init
+[debug] [2021-09-20T20:52:07.236Z] CLI Version:   9.18.0
+[debug] [2021-09-20T20:52:07.236Z] Platform:      linux
+[debug] [2021-09-20T20:52:07.236Z] Node Version:  v14.16.0
+[debug] [2021-09-20T20:52:07.237Z] Time:          Mon Sep 20 2021 16:52:07 GMT-0400 (Eastern Daylight Time)
+[debug] [2021-09-20T20:52:07.237Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-09-20T20:52:07.241Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-09-20T20:52:07.241Z] > authorizing via signed-in user (awang.yz@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/awang/project-pantry-engine/client
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2021-09-20T20:52:21.992Z] > refreshing access token with scopes: []
+[debug] [2021-09-20T20:52:21.992Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-09-20T20:52:22.093Z] <<< HTTP RESPONSE 200 {"date":"Mon, 20 Sep 2021 20:52:26 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-20T20:52:22.112Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2021-09-20T20:52:22.449Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2021-09-20T20:52:22.449Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project pantry-engine (pantry-engine) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2021-09-20T20:52:46.608Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2021-09-20T20:52:46.657Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2021-09-20T20:52:46.657Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.0.2","browserURL":"https://www.gstatic.com/firebasejs/9.0.2/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.0.2/firebase.tgz"},"live":{"version":"9.0","browserURL":"https://www.gstatic.com/firebasejs/live/9.0/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.0/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.0.2/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.0.2/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.0.2/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.0.2/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.0.2/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.0.2/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore/lite.js","storage":"https://www.gstatic.com/firebasejs/9.0.2/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.0.2/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.0.2/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.0.2/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.0.2/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.0.2/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.memory.js"}}
+[info] ✔  Wrote build/index.html 
+[info] 
+[info] i  Detected a .git folder at /home/awang/project-pantry-engine 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=597074308&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-09-20T20:52:52.368Z] >>> HTTP REQUEST POST https://github.com/login/oauth/access_token  
+ {"client_id":"89cf50f02ac6aaed3484","client_secret":"3330d14abc895d9a74d5f17cd7a00711fa2c5bf0","code":"af92825562ab8c1a1d6b","redirect_uri":"http://localhost:9005","state":"597074308"}
+[debug] [2021-09-20T20:52:52.532Z] <<< HTTP RESPONSE 200 {"server":"GitHub.com","date":"Mon, 20 Sep 2021 20:52:57 GMT","content-type":"application/json; charset=utf-8","transfer-encoding":"chunked","vary":"X-PJAX, X-PJAX-Container, Accept-Encoding, Accept, X-Requested-With","permissions-policy":"interest-cohort=()","etag":"W/\"4007ad61e70046b9c70a3b227131fcd2\"","cache-control":"max-age=0, private, must-revalidate","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-frame-options":"deny","x-content-type-options":"nosniff","x-xss-protection":"0","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","expect-ct":"max-age=2592000, report-uri=\"https://api.github.com/_private/browser/errors\"","content-security-policy":"default-src 'none'; base-uri 'self'; block-all-mixed-content; child-src github.githubassets.com; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events translator.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com viewscreen.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com secured-user-images.githubusercontent.com/ *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.githubassets.com github.com/socket-worker-0af8a29d.js gist.github.com/socket-worker-0af8a29d.js","x-github-request-id":"E578:4AB7:19CC7B:2A99A0:6148F4A9"}
+[debug] [2021-09-20T20:52:52.536Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2021-09-20T20:52:52.724Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2021-09-20T20:52:52.724Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"AdamWang00","id":57300426,"node_id":"MDQ6VXNlcjU3MzAwNDI2","avatar_url":"https://avatars.githubusercontent.com/u/57300426?v=4","gravatar_id":"","url":"https://api.github.com/users/AdamWang00","html_url":"https://github.com/AdamWang00","followers_url":"https://api.github.com/users/AdamWang00/followers","following_url":"https://api.github.com/users/AdamWang00/following{/other_user}","gists_url":"https://api.github.com/users/AdamWang00/gists{/gist_id}","starred_url":"https://api.github.com/users/AdamWang00/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/AdamWang00/subscriptions","organizations_url":"https://api.github.com/users/AdamWang00/orgs","repos_url":"https://api.github.com/users/AdamWang00/repos","events_url":"https://api.github.com/users/AdamWang00/events{/privacy}","received_events_url":"https://api.github.com/users/AdamWang00/received_events","type":"User","site_admin":false,"name":"Adam Wang","company":null,"blog":"adamwang.me","location":"Metro Atlanta","email":null,"hireable":null,"bio":"Computer Science and Applied Mathematics Student at Brown University","twitter_username":null,"public_repos":20,"public_gists":0,"followers":8,"following":11,"created_at":"2019-11-02T19:34:45Z","updated_at":"2021-09-16T15:19:57Z","private_gists":0,"total_private_repos":5,"owned_private_repos":5,"disk_usage":66933,"collaborators":1,"two_factor_authentication":true,"plan":{"name":"pro","space":976562499,"collaborators":0,"private_repos":9999}}
+[info] 
+[info] ✔  Success! Logged into GitHub as AdamWang00 
+[info] 
+[debug] [2021-09-20T20:53:12.810Z] >>> [apiv2][query] GET https://api.github.com/repos/fullstackatbrown/project-pantry-engine/actions/secrets/public-key type=owner
+[debug] [2021-09-20T20:53:12.966Z] <<< [apiv2][status] GET https://api.github.com/repos/fullstackatbrown/project-pantry-engine/actions/secrets/public-key 403
+[debug] [2021-09-20T20:53:12.967Z] <<< [apiv2][body] GET https://api.github.com/repos/fullstackatbrown/project-pantry-engine/actions/secrets/public-key {"message":"Must have admin rights to Repository.","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[info] 
+[info] 
+[error] ⚠  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2021-09-20T20:53:46.797Z] ----------------------------------------------------------------------
+[debug] [2021-09-20T20:53:46.799Z] Command:       /home/awang/.nvm/versions/node/v14.16.0/bin/node /home/awang/.nvm/versions/node/v14.16.0/bin/firebase init
+[debug] [2021-09-20T20:53:46.799Z] CLI Version:   9.18.0
+[debug] [2021-09-20T20:53:46.799Z] Platform:      linux
+[debug] [2021-09-20T20:53:46.799Z] Node Version:  v14.16.0
+[debug] [2021-09-20T20:53:46.799Z] Time:          Mon Sep 20 2021 16:53:46 GMT-0400 (Eastern Daylight Time)
+[debug] [2021-09-20T20:53:46.799Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-09-20T20:53:46.803Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-09-20T20:53:46.804Z] > authorizing via signed-in user (awang.yz@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/awang/project-pantry-engine/client
+
+[error] 
+[error] Error: Must select at least one feature. Use SPACEBAR to select features, or specify a feature by running firebase init [feature_name]
+[debug] [2021-09-20T20:53:53.160Z] ----------------------------------------------------------------------
+[debug] [2021-09-20T20:53:53.161Z] Command:       /home/awang/.nvm/versions/node/v14.16.0/bin/node /home/awang/.nvm/versions/node/v14.16.0/bin/firebase init
+[debug] [2021-09-20T20:53:53.162Z] CLI Version:   9.18.0
+[debug] [2021-09-20T20:53:53.162Z] Platform:      linux
+[debug] [2021-09-20T20:53:53.162Z] Node Version:  v14.16.0
+[debug] [2021-09-20T20:53:53.162Z] Time:          Mon Sep 20 2021 16:53:53 GMT-0400 (Eastern Daylight Time)
+[debug] [2021-09-20T20:53:53.162Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-09-20T20:53:53.166Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-09-20T20:53:53.167Z] > authorizing via signed-in user (awang.yz@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/awang/project-pantry-engine/client
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2021-09-20T20:53:56.752Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2021-09-20T20:53:57.061Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2021-09-20T20:53:57.061Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project pantry-engine (pantry-engine) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2021-09-20T20:54:04.796Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2021-09-20T20:54:04.853Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2021-09-20T20:54:04.853Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.0.2","browserURL":"https://www.gstatic.com/firebasejs/9.0.2/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.0.2/firebase.tgz"},"live":{"version":"9.0","browserURL":"https://www.gstatic.com/firebasejs/live/9.0/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.0/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.0.2/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.0.2/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.0.2/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.0.2/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.0.2/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.0.2/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore/lite.js","storage":"https://www.gstatic.com/firebasejs/9.0.2/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.0.2/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.0.2/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.0.2/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.0.2/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.0.2/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.memory.js"}}
+[info] ✔  Wrote build/index.html 
+[debug] [2021-09-20T20:54:18.627Z] ----------------------------------------------------------------------
+[debug] [2021-09-20T20:54:18.628Z] Command:       /home/awang/.nvm/versions/node/v14.16.0/bin/node /home/awang/.nvm/versions/node/v14.16.0/bin/firebase deploy
+[debug] [2021-09-20T20:54:18.629Z] CLI Version:   9.18.0
+[debug] [2021-09-20T20:54:18.629Z] Platform:      linux
+[debug] [2021-09-20T20:54:18.629Z] Node Version:  v14.16.0
+[debug] [2021-09-20T20:54:18.629Z] Time:          Mon Sep 20 2021 16:54:18 GMT-0400 (Eastern Daylight Time)
+[debug] [2021-09-20T20:54:18.629Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-09-20T20:54:18.682Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-09-20T20:54:18.683Z] > authorizing via signed-in user (awang.yz@gmail.com)
+[debug] [2021-09-20T20:54:18.683Z] [iam] checking project pantry-engine for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-09-20T20:54:18.685Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-09-20T20:54:18.685Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-09-20T20:54:18.795Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","date":"Mon, 20 Sep 2021 20:54:23 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-20T20:54:18.808Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/pantry-engine:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-09-20T20:54:19.017Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 20 Sep 2021 20:54:23 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=125","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-20T20:54:19.019Z] > refreshing access token with scopes: []
+[debug] [2021-09-20T20:54:19.019Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-09-20T20:54:19.106Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Mon, 20 Sep 2021 20:54:23 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-20T20:54:19.121Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/pantry-engine [none]
+[debug] [2021-09-20T20:54:19.336Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/pantry-engine 200
+[debug] [2021-09-20T20:54:19.337Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/pantry-engine {"projectId":"pantry-engine","projectNumber":"649494546892","displayName":"pantry-engine","name":"projects/pantry-engine","resources":{"hostingSite":"pantry-engine"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'pantry-engine'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2021-09-20T20:54:19.339Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-09-20T20:54:19.340Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-09-20T20:54:19.419Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Mon, 20 Sep 2021 20:54:24 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-20T20:54:19.429Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/pantry-engine/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2021-09-20T20:54:20.620Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 20 Sep 2021 20:54:25 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[pantry-engine]: beginning deploy... 
+[info] i  hosting[pantry-engine]: found 1 files in build 
+[debug] [2021-09-20T20:54:20.624Z] [hosting] hash cache [YnVpbGQ] not populated
+[debug] [2021-09-20T20:54:20.627Z] > refreshing access token with scopes: []
+[debug] [2021-09-20T20:54:20.628Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-09-20T20:54:20.629Z] [hosting] hash cache [YnVpbGQ] stored for 1 files
+[debug] [2021-09-20T20:54:20.629Z] [hosting][hash queue][FINAL] {"max":2,"min":2,"avg":2,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":5}
+[debug] [2021-09-20T20:54:20.709Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Mon, 20 Sep 2021 20:54:25 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-20T20:54:20.723Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/sites/pantry-engine/versions/3854d8b6936d0075:populateFiles [none]
+[debug] [2021-09-20T20:54:20.723Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/pantry-engine/versions/3854d8b6936d0075:populateFiles {"files":{"/index.html":"256eafecef8976ca9cc03dd13843b3a6d19cf436ac7c3e92e75df53c6ac5824d"}}
+[debug] [2021-09-20T20:54:21.142Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/sites/pantry-engine/versions/3854d8b6936d0075:populateFiles 200
+[debug] [2021-09-20T20:54:21.142Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/pantry-engine/versions/3854d8b6936d0075:populateFiles {"uploadRequiredHashes":["256eafecef8976ca9cc03dd13843b3a6d19cf436ac7c3e92e75df53c6ac5824d"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/3854d8b6936d0075/files"}
+[debug] [2021-09-20T20:54:21.143Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/3854d8b6936d0075/files/256eafecef8976ca9cc03dd13843b3a6d19cf436ac7c3e92e75df53c6ac5824d [none]
+[debug] [2021-09-20T20:54:21.143Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/3854d8b6936d0075/files/256eafecef8976ca9cc03dd13843b3a6d19cf436ac7c3e92e75df53c6ac5824d [stream]
+[debug] [2021-09-20T20:54:21.144Z] [hosting][populate queue][FINAL] {"max":516,"min":516,"avg":516,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":517}
+[debug] [2021-09-20T20:54:21.144Z] [hosting] uploads queued: 1
+[debug] [2021-09-20T20:54:21.784Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/3854d8b6936d0075/files/256eafecef8976ca9cc03dd13843b3a6d19cf436ac7c3e92e75df53c6ac5824d 200
+[debug] [2021-09-20T20:54:21.784Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/3854d8b6936d0075/files/256eafecef8976ca9cc03dd13843b3a6d19cf436ac7c3e92e75df53c6ac5824d [stream]
+[debug] [2021-09-20T20:54:21.785Z] [hosting][upload queue][FINAL] {"max":642,"min":642,"avg":642,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":642}
+[info] ✔  hosting[pantry-engine]: file upload complete 
+[debug] [2021-09-20T20:54:21.785Z] [hosting] deploy completed after 1164ms
+[debug] [2021-09-20T20:54:21.786Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "pantry-engine"
+    },
+    "site": "pantry-engine",
+    "version": "sites/pantry-engine/versions/3854d8b6936d0075"
+  }
+]
+[info] i  hosting[pantry-engine]: finalizing version... 
+[debug] [2021-09-20T20:54:21.786Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-09-20T20:54:21.787Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-09-20T20:54:21.862Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Mon, 20 Sep 2021 20:54:26 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-20T20:54:21.872Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/pantry-engine/versions/3854d8b6936d0075?updateMask=status  
+ {"status":"FINALIZED"}
+[debug] [2021-09-20T20:54:22.367Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 20 Sep 2021 20:54:27 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-20T20:54:22.367Z] [hosting] finalized version for pantry-engine: {"name":"sites/pantry-engine/versions/3854d8b6936d0075","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2021-09-20T20:54:24.700541Z","createUser":{"email":"awang.yz@gmail.com"},"finalizeTime":"2021-09-20T20:54:27.151301Z","finalizeUser":{"email":"awang.yz@gmail.com"}}
+[info] ✔  hosting[pantry-engine]: version finalized 
+[info] i  hosting[pantry-engine]: releasing new version... 
+[debug] [2021-09-20T20:54:22.368Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/pantry-engine/releases?version_name=sites/pantry-engine/versions/3854d8b6936d0075  
+ {"message":null}
+[debug] [2021-09-20T20:54:22.878Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 20 Sep 2021 20:54:27 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-20T20:56:00.775Z] ----------------------------------------------------------------------
+[debug] [2021-09-20T20:56:00.776Z] Command:       /home/awang/.nvm/versions/node/v14.16.0/bin/node /home/awang/.nvm/versions/node/v14.16.0/bin/firebase deploy
+[debug] [2021-09-20T20:56:00.777Z] CLI Version:   9.18.0
+[debug] [2021-09-20T20:56:00.777Z] Platform:      linux
+[debug] [2021-09-20T20:56:00.777Z] Node Version:  v14.16.0
+[debug] [2021-09-20T20:56:00.777Z] Time:          Mon Sep 20 2021 16:56:00 GMT-0400 (Eastern Daylight Time)
+[debug] [2021-09-20T20:56:00.777Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-09-20T20:56:00.819Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-09-20T20:56:00.819Z] > authorizing via signed-in user (awang.yz@gmail.com)
+[debug] [2021-09-20T20:56:00.820Z] [iam] checking project pantry-engine for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-09-20T20:56:00.821Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/pantry-engine:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-09-20T20:56:01.031Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 20 Sep 2021 20:56:05 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=137","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-20T20:56:01.032Z] > refreshing access token with scopes: []
+[debug] [2021-09-20T20:56:01.033Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-09-20T20:56:01.101Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Mon, 20 Sep 2021 20:56:05 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-20T20:56:01.124Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/pantry-engine [none]
+[debug] [2021-09-20T20:56:01.436Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/pantry-engine 200
+[debug] [2021-09-20T20:56:01.436Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/pantry-engine {"projectId":"pantry-engine","projectNumber":"649494546892","displayName":"pantry-engine","name":"projects/pantry-engine","resources":{"hostingSite":"pantry-engine"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'pantry-engine'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2021-09-20T20:56:01.439Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-09-20T20:56:01.439Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-09-20T20:56:01.520Z] <<< HTTP RESPONSE 200 {"date":"Mon, 20 Sep 2021 20:56:06 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-20T20:56:01.539Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/pantry-engine/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2021-09-20T20:56:02.250Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 20 Sep 2021 20:56:07 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[pantry-engine]: beginning deploy... 
+[info] i  hosting[pantry-engine]: found 19 files in build 
+[debug] [2021-09-20T20:56:02.421Z] > refreshing access token with scopes: []
+[debug] [2021-09-20T20:56:02.421Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-09-20T20:56:02.422Z] [hosting] hash cache [YnVpbGQ] stored for 19 files
+[debug] [2021-09-20T20:56:02.422Z] [hosting][hash queue][FINAL] {"max":157,"min":9,"avg":18.210526315789473,"active":0,"complete":19,"success":19,"errored":0,"retried":0,"total":19,"elapsed":162}
+[debug] [2021-09-20T20:56:02.513Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Mon, 20 Sep 2021 20:56:07 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-20T20:56:02.523Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/sites/pantry-engine/versions/f825ea7b7c1665ef:populateFiles [none]
+[debug] [2021-09-20T20:56:02.524Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/pantry-engine/versions/f825ea7b7c1665ef:populateFiles {"files":{"/asset-manifest.json":"ef573a729974d7456497a4967d3d341ca868d7e6019493783abfa5b1a4d1372b","/favicon.ico":"c599b7a91ab3627e3538125d9f40adc2d4bf949046984262670545dc7738af06","/index.html":"b389e639d4d7f0d479aba73b52ae7ea57bb1f14425166b0fe099d9a2ed2bc11d","/logo192.png":"76c449ccb9cd117c2f2338f091b18f7050f3210e249b2228f5c81b23f34377cd","/logo512.png":"7779210d56c1f3741e2e487799fe3092def4fa6ac450a60532b807c3a8971205","/manifest.json":"0958a5e0c831126100c8c2d06a6bbaa665a3900f21aaff4130238a6f5a113aa1","/precache-manifest.20b5ee4869c3c0118baeef1992365e02.js":"cbe6b28997150cc57d09810be0720552b89285c030435e6688a9ec875537c59e","/robots.txt":"2544ca049f223a42bff01f72ad930a5edba75bbb7199d0f8430a02ff5aca16ec","/service-worker.js":"0527843a9a043798667e7e74d53155bae988389b4ff11fcf24adce828da07d2d","/static/css/main.6f27cb9a.chunk.css":"b31d93d16bd02b2b38adeab057e99deb4311b376103f24dd2fb42b51c6d0f6b9","/static/css/main.6f27cb9a.chunk.css.map":"6c66983e0640be806444a1891ca0a644dee2b1cb4f7247bfef47e316e75655ec","/static/js/1.d3014d8e.chunk.js":"d78aa7c929dbe783e89325e0c8b5ae1c558a4bbbc547f1729c780ef7763cda5a","/static/js/1.d3014d8e.chunk.js.map":"4ec95dd5844a95b8938f41f5ebde7bcfad3712e1969bf3f9127ef6f4510cfbc5","/static/js/main.53ca9bdc.chunk.js":"6d458d27c383e3236349d58851998bcf460676aac3b42c4699c0c1f4a7fc40e4","/static/js/runtime~main.55a19cfb.js":"d1702a619324a60fede2848e617ed1009b11696a666eb703fcb6b56980a7ed3d","/static/js/main.53ca9bdc.chunk.js.map":"ec8e01a3227aa0d502ed5b132e00e22ffd71fa6397c182f168209b0fbfba962c","/static/js/runtime~main.55a19cfb.js.map":"74eefcad006df08cacdf26f41b300702c348730e47c0a8d616e85f9d64588bdf","/static/js/2.da5d856d.chunk.js":"2b67605f5ebbda06703114fd8f9879838e85b1757f05e608d2b5db1373cf0474","/static/js/2.da5d856d.chunk.js.map":"bc4f73dfd7208a636519cf71008431f7ab0192b4a48d820ce33f2932e43b81b3"}}
+[debug] [2021-09-20T20:56:03.048Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/sites/pantry-engine/versions/f825ea7b7c1665ef:populateFiles 200
+[debug] [2021-09-20T20:56:03.048Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/pantry-engine/versions/f825ea7b7c1665ef:populateFiles {"uploadRequiredHashes":["6d458d27c383e3236349d58851998bcf460676aac3b42c4699c0c1f4a7fc40e4","ef573a729974d7456497a4967d3d341ca868d7e6019493783abfa5b1a4d1372b","4ec95dd5844a95b8938f41f5ebde7bcfad3712e1969bf3f9127ef6f4510cfbc5","76c449ccb9cd117c2f2338f091b18f7050f3210e249b2228f5c81b23f34377cd","b389e639d4d7f0d479aba73b52ae7ea57bb1f14425166b0fe099d9a2ed2bc11d","0958a5e0c831126100c8c2d06a6bbaa665a3900f21aaff4130238a6f5a113aa1","d1702a619324a60fede2848e617ed1009b11696a666eb703fcb6b56980a7ed3d","6c66983e0640be806444a1891ca0a644dee2b1cb4f7247bfef47e316e75655ec","bc4f73dfd7208a636519cf71008431f7ab0192b4a48d820ce33f2932e43b81b3","2544ca049f223a42bff01f72ad930a5edba75bbb7199d0f8430a02ff5aca16ec","ec8e01a3227aa0d502ed5b132e00e22ffd71fa6397c182f168209b0fbfba962c","b31d93d16bd02b2b38adeab057e99deb4311b376103f24dd2fb42b51c6d0f6b9","cbe6b28997150cc57d09810be0720552b89285c030435e6688a9ec875537c59e","0527843a9a043798667e7e74d53155bae988389b4ff11fcf24adce828da07d2d","7779210d56c1f3741e2e487799fe3092def4fa6ac450a60532b807c3a8971205","d78aa7c929dbe783e89325e0c8b5ae1c558a4bbbc547f1729c780ef7763cda5a","74eefcad006df08cacdf26f41b300702c348730e47c0a8d616e85f9d64588bdf","c599b7a91ab3627e3538125d9f40adc2d4bf949046984262670545dc7738af06","2b67605f5ebbda06703114fd8f9879838e85b1757f05e608d2b5db1373cf0474"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files"}
+[debug] [2021-09-20T20:56:03.052Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/6d458d27c383e3236349d58851998bcf460676aac3b42c4699c0c1f4a7fc40e4 [none]
+[debug] [2021-09-20T20:56:03.052Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/6d458d27c383e3236349d58851998bcf460676aac3b42c4699c0c1f4a7fc40e4 [stream]
+[debug] [2021-09-20T20:56:03.053Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/ef573a729974d7456497a4967d3d341ca868d7e6019493783abfa5b1a4d1372b [none]
+[debug] [2021-09-20T20:56:03.053Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/ef573a729974d7456497a4967d3d341ca868d7e6019493783abfa5b1a4d1372b [stream]
+[debug] [2021-09-20T20:56:03.054Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/4ec95dd5844a95b8938f41f5ebde7bcfad3712e1969bf3f9127ef6f4510cfbc5 [none]
+[debug] [2021-09-20T20:56:03.054Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/4ec95dd5844a95b8938f41f5ebde7bcfad3712e1969bf3f9127ef6f4510cfbc5 [stream]
+[debug] [2021-09-20T20:56:03.057Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/76c449ccb9cd117c2f2338f091b18f7050f3210e249b2228f5c81b23f34377cd [none]
+[debug] [2021-09-20T20:56:03.057Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/76c449ccb9cd117c2f2338f091b18f7050f3210e249b2228f5c81b23f34377cd [stream]
+[debug] [2021-09-20T20:56:03.058Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/b389e639d4d7f0d479aba73b52ae7ea57bb1f14425166b0fe099d9a2ed2bc11d [none]
+[debug] [2021-09-20T20:56:03.058Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/b389e639d4d7f0d479aba73b52ae7ea57bb1f14425166b0fe099d9a2ed2bc11d [stream]
+[debug] [2021-09-20T20:56:03.059Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/0958a5e0c831126100c8c2d06a6bbaa665a3900f21aaff4130238a6f5a113aa1 [none]
+[debug] [2021-09-20T20:56:03.059Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/0958a5e0c831126100c8c2d06a6bbaa665a3900f21aaff4130238a6f5a113aa1 [stream]
+[debug] [2021-09-20T20:56:03.060Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/d1702a619324a60fede2848e617ed1009b11696a666eb703fcb6b56980a7ed3d [none]
+[debug] [2021-09-20T20:56:03.060Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/d1702a619324a60fede2848e617ed1009b11696a666eb703fcb6b56980a7ed3d [stream]
+[debug] [2021-09-20T20:56:03.062Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/6c66983e0640be806444a1891ca0a644dee2b1cb4f7247bfef47e316e75655ec [none]
+[debug] [2021-09-20T20:56:03.062Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/6c66983e0640be806444a1891ca0a644dee2b1cb4f7247bfef47e316e75655ec [stream]
+[debug] [2021-09-20T20:56:03.063Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/bc4f73dfd7208a636519cf71008431f7ab0192b4a48d820ce33f2932e43b81b3 [none]
+[debug] [2021-09-20T20:56:03.063Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/bc4f73dfd7208a636519cf71008431f7ab0192b4a48d820ce33f2932e43b81b3 [stream]
+[debug] [2021-09-20T20:56:03.064Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/2544ca049f223a42bff01f72ad930a5edba75bbb7199d0f8430a02ff5aca16ec [none]
+[debug] [2021-09-20T20:56:03.064Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/2544ca049f223a42bff01f72ad930a5edba75bbb7199d0f8430a02ff5aca16ec [stream]
+[debug] [2021-09-20T20:56:03.064Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/ec8e01a3227aa0d502ed5b132e00e22ffd71fa6397c182f168209b0fbfba962c [none]
+[debug] [2021-09-20T20:56:03.065Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/ec8e01a3227aa0d502ed5b132e00e22ffd71fa6397c182f168209b0fbfba962c [stream]
+[debug] [2021-09-20T20:56:03.065Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/b31d93d16bd02b2b38adeab057e99deb4311b376103f24dd2fb42b51c6d0f6b9 [none]
+[debug] [2021-09-20T20:56:03.065Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/b31d93d16bd02b2b38adeab057e99deb4311b376103f24dd2fb42b51c6d0f6b9 [stream]
+[debug] [2021-09-20T20:56:03.066Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/cbe6b28997150cc57d09810be0720552b89285c030435e6688a9ec875537c59e [none]
+[debug] [2021-09-20T20:56:03.066Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/cbe6b28997150cc57d09810be0720552b89285c030435e6688a9ec875537c59e [stream]
+[debug] [2021-09-20T20:56:03.067Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/0527843a9a043798667e7e74d53155bae988389b4ff11fcf24adce828da07d2d [none]
+[debug] [2021-09-20T20:56:03.067Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/0527843a9a043798667e7e74d53155bae988389b4ff11fcf24adce828da07d2d [stream]
+[debug] [2021-09-20T20:56:03.068Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/7779210d56c1f3741e2e487799fe3092def4fa6ac450a60532b807c3a8971205 [none]
+[debug] [2021-09-20T20:56:03.068Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/7779210d56c1f3741e2e487799fe3092def4fa6ac450a60532b807c3a8971205 [stream]
+[debug] [2021-09-20T20:56:03.069Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/d78aa7c929dbe783e89325e0c8b5ae1c558a4bbbc547f1729c780ef7763cda5a [none]
+[debug] [2021-09-20T20:56:03.069Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/d78aa7c929dbe783e89325e0c8b5ae1c558a4bbbc547f1729c780ef7763cda5a [stream]
+[debug] [2021-09-20T20:56:03.069Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/74eefcad006df08cacdf26f41b300702c348730e47c0a8d616e85f9d64588bdf [none]
+[debug] [2021-09-20T20:56:03.069Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/74eefcad006df08cacdf26f41b300702c348730e47c0a8d616e85f9d64588bdf [stream]
+[debug] [2021-09-20T20:56:03.070Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/c599b7a91ab3627e3538125d9f40adc2d4bf949046984262670545dc7738af06 [none]
+[debug] [2021-09-20T20:56:03.070Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/c599b7a91ab3627e3538125d9f40adc2d4bf949046984262670545dc7738af06 [stream]
+[debug] [2021-09-20T20:56:03.071Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/2b67605f5ebbda06703114fd8f9879838e85b1757f05e608d2b5db1373cf0474 [none]
+[debug] [2021-09-20T20:56:03.071Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/2b67605f5ebbda06703114fd8f9879838e85b1757f05e608d2b5db1373cf0474 [stream]
+[debug] [2021-09-20T20:56:03.072Z] [hosting][populate queue][FINAL] {"max":632,"min":632,"avg":632,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":652}
+[debug] [2021-09-20T20:56:03.072Z] [hosting] uploads queued: 19
+[debug] [2021-09-20T20:56:03.577Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/76c449ccb9cd117c2f2338f091b18f7050f3210e249b2228f5c81b23f34377cd 200
+[debug] [2021-09-20T20:56:03.577Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/76c449ccb9cd117c2f2338f091b18f7050f3210e249b2228f5c81b23f34377cd [stream]
+[debug] [2021-09-20T20:56:03.578Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/7779210d56c1f3741e2e487799fe3092def4fa6ac450a60532b807c3a8971205 200
+[debug] [2021-09-20T20:56:03.578Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/7779210d56c1f3741e2e487799fe3092def4fa6ac450a60532b807c3a8971205 [stream]
+[debug] [2021-09-20T20:56:03.619Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/c599b7a91ab3627e3538125d9f40adc2d4bf949046984262670545dc7738af06 200
+[debug] [2021-09-20T20:56:03.619Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/c599b7a91ab3627e3538125d9f40adc2d4bf949046984262670545dc7738af06 [stream]
+[debug] [2021-09-20T20:56:03.628Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/2544ca049f223a42bff01f72ad930a5edba75bbb7199d0f8430a02ff5aca16ec 200
+[debug] [2021-09-20T20:56:03.628Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/2544ca049f223a42bff01f72ad930a5edba75bbb7199d0f8430a02ff5aca16ec [stream]
+[debug] [2021-09-20T20:56:03.646Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/ef573a729974d7456497a4967d3d341ca868d7e6019493783abfa5b1a4d1372b 200
+[debug] [2021-09-20T20:56:03.646Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/ef573a729974d7456497a4967d3d341ca868d7e6019493783abfa5b1a4d1372b [stream]
+[debug] [2021-09-20T20:56:03.656Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/4ec95dd5844a95b8938f41f5ebde7bcfad3712e1969bf3f9127ef6f4510cfbc5 200
+[debug] [2021-09-20T20:56:03.656Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/4ec95dd5844a95b8938f41f5ebde7bcfad3712e1969bf3f9127ef6f4510cfbc5 [stream]
+[debug] [2021-09-20T20:56:03.673Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/0958a5e0c831126100c8c2d06a6bbaa665a3900f21aaff4130238a6f5a113aa1 200
+[debug] [2021-09-20T20:56:03.674Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/0958a5e0c831126100c8c2d06a6bbaa665a3900f21aaff4130238a6f5a113aa1 [stream]
+[debug] [2021-09-20T20:56:03.674Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/cbe6b28997150cc57d09810be0720552b89285c030435e6688a9ec875537c59e 200
+[debug] [2021-09-20T20:56:03.674Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/cbe6b28997150cc57d09810be0720552b89285c030435e6688a9ec875537c59e [stream]
+[debug] [2021-09-20T20:56:03.693Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/6c66983e0640be806444a1891ca0a644dee2b1cb4f7247bfef47e316e75655ec 200
+[debug] [2021-09-20T20:56:03.693Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/6c66983e0640be806444a1891ca0a644dee2b1cb4f7247bfef47e316e75655ec [stream]
+[debug] [2021-09-20T20:56:03.721Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/b389e639d4d7f0d479aba73b52ae7ea57bb1f14425166b0fe099d9a2ed2bc11d 200
+[debug] [2021-09-20T20:56:03.721Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/b389e639d4d7f0d479aba73b52ae7ea57bb1f14425166b0fe099d9a2ed2bc11d [stream]
+[debug] [2021-09-20T20:56:03.729Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/6d458d27c383e3236349d58851998bcf460676aac3b42c4699c0c1f4a7fc40e4 200
+[debug] [2021-09-20T20:56:03.729Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/6d458d27c383e3236349d58851998bcf460676aac3b42c4699c0c1f4a7fc40e4 [stream]
+[debug] [2021-09-20T20:56:03.735Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/2b67605f5ebbda06703114fd8f9879838e85b1757f05e608d2b5db1373cf0474 200
+[debug] [2021-09-20T20:56:03.736Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/2b67605f5ebbda06703114fd8f9879838e85b1757f05e608d2b5db1373cf0474 [stream]
+[debug] [2021-09-20T20:56:03.736Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/b31d93d16bd02b2b38adeab057e99deb4311b376103f24dd2fb42b51c6d0f6b9 200
+[debug] [2021-09-20T20:56:03.737Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/b31d93d16bd02b2b38adeab057e99deb4311b376103f24dd2fb42b51c6d0f6b9 [stream]
+[debug] [2021-09-20T20:56:03.737Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/d1702a619324a60fede2848e617ed1009b11696a666eb703fcb6b56980a7ed3d 200
+[debug] [2021-09-20T20:56:03.738Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/d1702a619324a60fede2848e617ed1009b11696a666eb703fcb6b56980a7ed3d [stream]
+[debug] [2021-09-20T20:56:03.745Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/d78aa7c929dbe783e89325e0c8b5ae1c558a4bbbc547f1729c780ef7763cda5a 200
+[debug] [2021-09-20T20:56:03.745Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/d78aa7c929dbe783e89325e0c8b5ae1c558a4bbbc547f1729c780ef7763cda5a [stream]
+[debug] [2021-09-20T20:56:03.746Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/ec8e01a3227aa0d502ed5b132e00e22ffd71fa6397c182f168209b0fbfba962c 200
+[debug] [2021-09-20T20:56:03.746Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/ec8e01a3227aa0d502ed5b132e00e22ffd71fa6397c182f168209b0fbfba962c [stream]
+[debug] [2021-09-20T20:56:03.755Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/0527843a9a043798667e7e74d53155bae988389b4ff11fcf24adce828da07d2d 200
+[debug] [2021-09-20T20:56:03.755Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/0527843a9a043798667e7e74d53155bae988389b4ff11fcf24adce828da07d2d [stream]
+[debug] [2021-09-20T20:56:03.759Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/74eefcad006df08cacdf26f41b300702c348730e47c0a8d616e85f9d64588bdf 200
+[debug] [2021-09-20T20:56:03.759Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/74eefcad006df08cacdf26f41b300702c348730e47c0a8d616e85f9d64588bdf [stream]
+[debug] [2021-09-20T20:56:03.766Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/bc4f73dfd7208a636519cf71008431f7ab0192b4a48d820ce33f2932e43b81b3 200
+[debug] [2021-09-20T20:56:03.767Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pantry-engine/versions/f825ea7b7c1665ef/files/bc4f73dfd7208a636519cf71008431f7ab0192b4a48d820ce33f2932e43b81b3 [stream]
+[debug] [2021-09-20T20:56:03.767Z] [hosting][upload queue][FINAL] {"max":717,"min":527,"avg":643.3157894736842,"active":0,"complete":19,"success":19,"errored":0,"retried":0,"total":19,"elapsed":719}
+[info] ✔  hosting[pantry-engine]: file upload complete 
+[debug] [2021-09-20T20:56:03.768Z] [hosting] deploy completed after 1516ms
+[debug] [2021-09-20T20:56:03.768Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "pantry-engine"
+    },
+    "site": "pantry-engine",
+    "version": "sites/pantry-engine/versions/f825ea7b7c1665ef"
+  }
+]
+[info] i  hosting[pantry-engine]: finalizing version... 
+[debug] [2021-09-20T20:56:03.769Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-09-20T20:56:03.769Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-09-20T20:56:03.852Z] <<< HTTP RESPONSE 200 {"date":"Mon, 20 Sep 2021 20:56:08 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-20T20:56:03.870Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/pantry-engine/versions/f825ea7b7c1665ef?updateMask=status  
+ {"status":"FINALIZED"}
+[debug] [2021-09-20T20:56:04.392Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 20 Sep 2021 20:56:09 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-20T20:56:04.392Z] [hosting] finalized version for pantry-engine: {"name":"sites/pantry-engine/versions/f825ea7b7c1665ef","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2021-09-20T20:56:06.624986Z","createUser":{"email":"awang.yz@gmail.com"},"finalizeTime":"2021-09-20T20:56:09.175266Z","finalizeUser":{"email":"awang.yz@gmail.com"}}
+[info] ✔  hosting[pantry-engine]: version finalized 
+[info] i  hosting[pantry-engine]: releasing new version... 
+[debug] [2021-09-20T20:56:04.393Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/pantry-engine/releases?version_name=sites/pantry-engine/versions/f825ea7b7c1665ef  
+ {"message":null}
+[debug] [2021-09-20T20:56:04.859Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 20 Sep 2021 20:56:09 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
