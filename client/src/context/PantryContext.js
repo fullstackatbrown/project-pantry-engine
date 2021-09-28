@@ -1,17 +1,17 @@
-import React, { createContext, useContext, useMemo, useState } from 'react'
+import React, { createContext, useContext, useMemo, useState } from "react";
 
+const PantryContext = createContext();
 
-const PantryContext = createContext()
-
-export const PantryContextProvider = ( {children} ) => {
-
-  const [pantry, setPantry] = useState([])
+export const PantryContextProvider = ({ children }) => {
+  const [pantry, setPantry] = useState([]);
 
   const routes = useMemo(() => {
-    return { pantry, setPantry }
-  }, [pantry, setPantry])
+    return { pantry, setPantry };
+  }, [pantry, setPantry]);
 
-  return <PantryContext.Provider value={routes} > {children} </PantryContext.Provider>
-}
+  return (
+    <PantryContext.Provider value={routes}> {children} </PantryContext.Provider>
+  );
+};
 
-export const usePantryContext = () => useContext(PantryContext)
+export const usePantryContext = () => useContext(PantryContext);

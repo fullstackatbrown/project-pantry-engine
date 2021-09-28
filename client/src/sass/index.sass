@@ -50,10 +50,15 @@ $transition-animation: cubic-bezier(0.29, 0.87, 0.7, 1.02)
     color: $thin-text
     text-shadow: $embedded // see if we want to keep this
 
+.list-group-item
+    // padding: 0.25rem 0.5rem
+    background-color: transparent
+    // @extend %ellipsis-overflow
+
 .recipe-card
     margin: 0.25em 1em
     border-radius: 1.5em
-    height: 8em
+    // height: 8em
     cursor: pointer
     @extend %default-transition
 
@@ -64,10 +69,11 @@ $transition-animation: cubic-bezier(0.29, 0.87, 0.7, 1.02)
         object-fit: cover
     .list-group-item
         padding: 0.25rem 0.5rem
+        background-color: transparent
         @extend %ellipsis-overflow
     .card-title
         color: $thick-text
-        font-size: 1.7em
+        font-size: 1.5em
     .card-text
         color: $light-gray-text
     .card-body
@@ -93,11 +99,12 @@ $transition-animation: cubic-bezier(0.29, 0.87, 0.7, 1.02)
     backdrop-filter: blur(8px)
 .recipe-preview
     .modal-content
+        padding: 1em
         border-radius: 1em
         #recipe-preview-name
             font: 32px $voces
         .row
-            height: 15em
+            height: auto
             margin: 0
         .recipe-preview-text
             padding: 10px
@@ -117,7 +124,10 @@ $transition-animation: cubic-bezier(0.29, 0.87, 0.7, 1.02)
             cursor: pointer
             height: 100%
             width: 100%
+            border-radius: 5px
             object-fit: cover
+    .button
+        height: 5em
 
 .ingredient-search-bar
     border-style: none
